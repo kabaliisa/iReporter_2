@@ -51,5 +51,4 @@ def get_specific_redflags(id):
         if redflag.to_json()['id']== id:
             return jsonify({'status':201,'data':redflag.to_json()}),201
        
-    return jsonify({'status':404 ,'message': 'Red-flag not found'}),404 
-
+    return jsonify({'status':404 ,'message': 'Red-flag not found'}),404
