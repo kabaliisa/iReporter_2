@@ -2,7 +2,6 @@ from flask import jsonify,request
 from api import app
 from api.models.redflags import Incident,redflags
 
-<<<<<<< HEAD
 
 @app.route('/api/v1/redflags', methods=['POST'])
 def add_redflag():
@@ -13,14 +12,17 @@ def add_redflag():
     longitude = data['longitude']
     
     image = data['image']
-=======
-@app.route('/api/v1/redflags/<int:id>/location', methods=['PATCH'])
-def edit_specific_location(id):
->>>>>>> ft-edit-specific-red-flag
    
-    get_new_location = request.get_json()
+
+    location = {
+        "latitude": latitude,
+        "longitude": longitude
+    }
+
+    try:
+        if type(data['createdBy']) is not str:
+            raise ValueError('This  should be a string')
     
-<<<<<<< HEAD
         redflag = Incident(id, 'createdOn', data['createdBy'],data['incidentType'], location, data['comment'],image)
         redflags.append(redflag)
 
@@ -49,11 +51,5 @@ def get_specific_redflags(id):
         if redflag.to_json()['id']== id:
             return jsonify({'status':201,'data':redflag.to_json()}),201
        
-    return jsonify({'status':404 ,'message': 'Red-flag not found'}),404
-=======
-    for redflag in redflags:
-        if redflag.to_json()['id']== id:
-            redflag.to_json()['location'] = get_new_location['location']      
-            return jsonify({'status':200,'id':redflag.to_json()['id'],'message':"Updated red-flag record's location"})       
-    return jsonify({'status':404 ,'message': 'Red-flag not found'}) 
->>>>>>> ft-edit-specific-red-flag
+    return jsonify({'status':404 ,'message': 'Red-flag not found'}),404 
+
