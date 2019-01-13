@@ -30,3 +30,5 @@ def add_redflag():
         return jsonify({'status':400,'message': 'createdBy should be a string'}), 400
 
     return jsonify({'status':201,'data': [redflag.to_json()],'message':'Created red-flag record'}),201
+
+
