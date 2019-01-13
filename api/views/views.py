@@ -2,7 +2,6 @@ from flask import jsonify,request
 from api import app
 from api.models.redflags import Incident,redflags
 
-<<<<<<< HEAD
 
 @app.route('/api/v1/redflags', methods=['POST'])
 def add_redflag():
@@ -33,7 +32,6 @@ def add_redflag():
 
     return jsonify({'status':201,'data': [redflag.to_json()],'message':'Created red-flag record'}),201
 
-=======
 @app.route('/api/v1/redflags/<int:id>', methods=['DELETE'])
 def remove_specific_redflag(id):
     for red-flag in redflags:
@@ -42,8 +40,6 @@ def remove_specific_redflag(id):
         else:
             return jsonify({'status':404,'message':'not found'}),404    
     return jsonify({'status':200 ,'id':red-flag.to_json()['id'],'message': 'red-flag record has been deleted'}),200
->>>>>>> ft-delete-red-flag
-
 
 @app.route('/api/v1/redflags', methods=['GET'])
 def get_all_redflags():
@@ -66,7 +62,6 @@ def get_specific_redflags(id):
 
 @app.route('/api/v1/redflags/<int:id>/location', methods=['PATCH'])
 def edit_specific_location(id):
-   
     get_new_location = request.get_json()
     
     for redflag in redflags:
