@@ -2,6 +2,7 @@ from flask import jsonify,request
 from api import app
 from api.models.redflags import Incident,redflags
 
+<<<<<<< HEAD
 
 @app.route('/api/v1/redflags', methods=['POST'])
 def add_redflag():
@@ -32,6 +33,16 @@ def add_redflag():
 
     return jsonify({'status':201,'data': [redflag.to_json()],'message':'Created red-flag record'}),201
 
+=======
+@app.route('/api/v1/redflags/<int:id>', methods=['DELETE'])
+def remove_specific_redflag(id):
+    for red-flag in redflags:
+        if red-flag.to_json()['id']== id:
+            redflags.remove(red-flag)
+        else:
+            return jsonify({'status':404,'message':'not found'}),404    
+    return jsonify({'status':200 ,'id':red-flag.to_json()['id'],'message': 'red-flag record has been deleted'}),200
+>>>>>>> ft-delete-red-flag
 
 
 @app.route('/api/v1/redflags', methods=['GET'])
