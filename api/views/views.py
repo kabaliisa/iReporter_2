@@ -9,5 +9,5 @@ def remove_specific_redflag(id):
             redflags.remove(redflag)
         else:
             return jsonify({'status':404,'message':'not found'}),404    
-    return jsonify({'status':200 ,'id':red-flag.to_json()['id'],'message': 'red-flag record has been deleted'}),200
+    return jsonify({'status':200 ,'id':redflag.to_json()['id'],'message': 'red-flag record has been deleted'}),200
 
