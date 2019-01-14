@@ -6,7 +6,7 @@ from api.models.redflags import Incident,redflags
 def remove_specific_redflag(id):
     for redflag in redflags:
         if redflag.to_json()['id']== id:
-            redflags.remove(red-flag)
+            redflags.remove(redflag)
         else:
             return jsonify({'status':404,'message':'not found'}),404    
     return jsonify({'status':200 ,'id':red-flag.to_json()['id'],'message': 'red-flag record has been deleted'}),200
