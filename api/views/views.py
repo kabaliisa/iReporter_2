@@ -4,8 +4,8 @@ from api.models.redflags import Incident,redflags
 
 @app.route('/api/v1/redflags/<int:id>', methods=['DELETE'])
 def remove_specific_redflag(id):
-    for red-flag in redflags:
-        if red-flag.to_json()['id']== id:
+    for redflag in redflags:
+        if redflag.to_json()['id']== id:
             redflags.remove(red-flag)
         else:
             return jsonify({'status':404,'message':'not found'}),404    
