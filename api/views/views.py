@@ -61,7 +61,7 @@ def edit_specific_location(id):
         if redflag.to_json()['id']== id:
             redflag.to_json()['location'] = get_new_location['location']      
             return jsonify({'status':200,'id':redflag.to_json()['id'],'message':"Updated red-flag record's location"})       
-    return jsonify({'status':404 ,'message': 'Red-flag not found'}) 
+    return jsonify({'status':404 ,'message': 'Red-flag not found'}),404 
 
 @app.route('/api/v1/redflags/<int:id>', methods=['DELETE'])
 def remove_specific_redflag(id):
