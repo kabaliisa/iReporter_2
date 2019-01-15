@@ -11,3 +11,7 @@ any/every citizen to bring any form of corruption to the notice of appropriate a
 2. [python](https://docs.python.org/3/)
 3. [pip](https://pypi.org/project/pip/)
 4. [virtualenv](https://virtualenv.pypa.io/en/stable/)
+
+# Getting Started
+
+1. Clone the project https://github.com/kabaliisa/iReporter_2.git
