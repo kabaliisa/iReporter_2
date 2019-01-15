@@ -7,7 +7,7 @@ any/every citizen to bring any form of corruption to the notice of appropriate a
 
 # Main requirements include:
 
-1. git
-2. python
-3. pip
-4. virtualenv
+1. [git](https://git-scm.com/)
+2. [python](https://docs.python.org/3/)
+3. [pip](https://pypi.org/project/pip/)
+4. [virtualenv](https://virtualenv.pypa.io/en/stable/)
