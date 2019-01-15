@@ -16,4 +16,4 @@ any/every citizen to bring any form of corruption to the notice of appropriate a
 
 1. Clone the project <br>
 
-   `git clone https://github.com/kabaliisa/iReporter_2.git`
+`git clone https://github.com/kabaliisa/iReporter_2.git`
