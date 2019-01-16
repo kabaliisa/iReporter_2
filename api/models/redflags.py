@@ -2,6 +2,7 @@ import datetime
 
 redflags = []
 
+
 class Incident:
     def __init__(self,id, createdOn, createdBy, incidentType, location, comment,image):
         self.id = len(redflags)+1

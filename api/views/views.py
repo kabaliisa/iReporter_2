@@ -41,19 +41,19 @@ def get_all_redflags():
         reds.append(redflag.to_json())
 
     if len(reds) < 1:
-        return jsonify({'status':404,'message': 'There are no red-flags'}),404
-    return jsonify({'status':201,'data': reds}),201
+        return jsonify({'status':404,'message': 'There are no red-flags'})
+    return jsonify({'status':200,'data': reds}),200
 
 
 @app.route('/api/v1/redflags/<int:id>', methods=['GET'])
 def get_specific_redflags(id):
     for redflag in redflags:  
         if redflag.to_json()['id']== id:
-            return jsonify({'status':201,'data':redflag.to_json()}),201
+            return jsonify({'status':200,'data':redflag.to_json()}),200
        
     return jsonify({'status':404 ,'message': 'Red-flag not found'}),404 
 
-@app.route('/api/v1/redflags/<int:id>/location', methods=['PATCH'])
+@app.route('/api/v1/redflags/<int:id>/location', methods=['PUT'])
 def edit_specific_location(id):
     get_new_location = request.get_json()
     
@@ -67,7 +67,7 @@ def edit_specific_location(id):
 def remove_specific_redflag(id):
     for redflag in redflags:
         if redflag.to_json()['id']== id:
-            redflags.remove(red-flag)
+            redflags.remove(redflag)
         else:
             return jsonify({'status':404,'message':'not found'}),404    
-    return jsonify({'status':200 ,'id':red-flag.to_json()['id'],'message': 'red-flag record has been deleted'}),200
+    return jsonify({'status':200 ,'id':redflag.to_json()['id'],'message': 'red-flag record has been deleted'}),200

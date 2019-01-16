@@ -1,4 +1,3 @@
-# from flask import Flask
 import unittest
 import json
 from api import app
@@ -29,13 +28,19 @@ class TestRedflag(unittest.TestCase):
         """Test get_all_redflags method"""
 
         response = self.app_tester.get("/api/v1/redflags")
-        self.assertEqual(response.status_code,201)
+        self.assertEqual(response.status_code,200)
+ 
+    def test_get_specific_redflags(self):
+        """Test get_specific_redflags method"""
 
-    # def get_specific_redflags(self):
-    #     """Tests method that gets specific redflags"""
-        
-    #     # input_data = { 'createdOn': '2/nov/2019', 'createdBy': 'solo','incidentType':'nepotism', 'location':'kisaasi','comment':'gdihdiududh','image':'duck.jpg'}
-    #     # self.app_tester.post('/api/v1/redflags', json=input_data)
-    #     response = self.app_tester.get("/api/v1/redflags/1")
-    #     # self.assertEqual(1, response_json[0]["id"])
-    #     self.assertEqual(response.status_code,200)
+        response = self.app_tester.get("/api/v1/redflags/1")
+        self.assertEqual(response.status_code,200)
+
+    
+    def test_remove_specific_redflag(self):
+        """Test remove_specific_redflag method"""
+     
+        response = self.app_tester.delete("/api/v1/redflags/1")
+        self.assertEqual(response.status_code,200)
+
+
