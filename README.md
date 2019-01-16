@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kabaliisa/iReporter_2.svg?branch=develop)](https://travis-ci.org/kabaliisa/iReporter_2) [![Coverage Status](https://coveralls.io/repos/github/kabaliisa/iReporter_2/badge.svg?branch=develop)](https://coveralls.io/github/kabaliisa/iReporter_2?branch=develop) [![Maintainability](https://api.codeclimate.com/v1/badges/e7930497fc0b4809925b/maintainability)](https://codeclimate.com/github/kabaliisa/iReporter_2/maintainability)
+[![Build Status](https://travis-ci.org/kabaliisa/iReporter_2.svg?branch=develop)](https://travis-ci.org/kabaliisa/iReporter_2) [![Coverage Status](https://coveralls.io/repos/github/kabaliisa/iReporter_2/badge.svg?branch=develop&service=github)](https://coveralls.io/github/kabaliisa/iReporter_2?branch=develop) [![Maintainability](https://api.codeclimate.com/v1/badges/e7930497fc0b4809925b/maintainability)](https://codeclimate.com/github/kabaliisa/iReporter_2/maintainability)
 
 # iReporter
 
