@@ -2,6 +2,10 @@ from flask import jsonify, request
 from api import app
 from api.models.redflags import Incident, redflags
 
+@app.route('/')
+def home():
+    return jsonify({'message':'welcome to iReporter'})
+
 @app.route('/api/v1/redflags', methods=['POST'])
 def add_redflag():
     data = request.get_json()
