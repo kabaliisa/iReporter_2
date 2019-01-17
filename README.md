@@ -28,5 +28,6 @@ any/every citizen to bring any form of corruption to the notice of appropriate a
 
 `python run.py`
 
-#Project Link
+# Project Link
+
 **Interface** The link to the pages hosted on gh-pages is:(https://kabaliisa.github.io/iReporter/UI/index.html)

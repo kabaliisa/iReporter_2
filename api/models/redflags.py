@@ -6,6 +6,7 @@ redflags = []
 class Incident:
     def __init__(
             self,
+            id,
             createdOn,
             createdBy,
             incidentType,
@@ -22,6 +23,7 @@ class Incident:
 
     def to_json(self):
         return {
+            'id': self.id,
             'createdOn': self.createdOn,
             'createdBy': self.createdBy,
             'incidentType': self.incidentType,
