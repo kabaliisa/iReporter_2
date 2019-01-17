@@ -17,3 +17,16 @@ any/every citizen to bring any form of corruption to the notice of appropriate a
 1. Clone the project <br>
 
 `git clone https://github.com/kabaliisa/iReporter_2.git`
+
+2. Create a virtual environment using `virtualenv` and activate it <br>
+
+`virtualenv` `venv` `venv\Scripts\Activate`
+
+3. Install packages using `pip install -r requiremets.txt`
+
+4. Run the app by running `run.py` <br>
+
+`python run.py`
+
+#Project Link
+**Interface** The link to the pages hosted on gh-pages is:(https://kabaliisa.github.io/iReporter/UI/index.html)
