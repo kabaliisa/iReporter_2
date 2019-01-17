@@ -9,6 +9,6 @@ def edit_specific_location(id):
     
     for redflag in redflags:
         if redflag.to_json()['id']== id:
-            redflag.to_json()['location'] = get_new_location['location']      
-            return jsonify({'status':200,'id':redflag.to_json()['id'],'message':"Updated red-flag record's location"})       
+            redflag.to_json()['location'].update(get_new_location['location'])      
+            return jsonify({'status':200,'id':redflag.to_json()['location'],'message':"Updated red-flag record's location"})       
     return jsonify({'status':404 ,'message': 'Red-flag not found'}) 
