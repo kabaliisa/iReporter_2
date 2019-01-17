@@ -63,7 +63,7 @@ def get_specific_redflags(id):
     return jsonify({'status': 404, 'message': 'Red-flag not found'}), 404
 
 
-@app.route('/api/v1/redflags/<int:id>/location', methods=['PATCH'])
+@app.route('/api/v1/redflags/<int:id>/location', methods=['PUT'])
 def edit_specific_location(id):
     get_new_location = request.get_json()
 
